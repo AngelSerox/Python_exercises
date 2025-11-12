@@ -24,6 +24,13 @@ Tortuga_2.goto(-300, -100)       # Posición inicial diferente para que no se en
 # --- META DE LA CARRERA ---
 meta = 300   # La coordenada X que deben alcanzar para ganar (cuanto más grande, más larga la carrera)
 
+meta_linea = turtle.Turtle()     # Crea un objeto para la linea de meta
+meta_linea.penup()               # Levanta el lápiz (no dibuja líneas)
+meta_linea.goto(meta, 150)       # Posición de inicio de la meta
+meta_linea.pendown()             # Baja el lápiz para crear la linea de meta
+meta_linea.goto(meta, -150)      # Traza la línea de meta
+meta_linea.hideturtle()          # Escoonde el objeto para que no se vea
+
 # --- INICIO DE LA CARRERA ---
 while True:
     # Cada tortuga avanza una distancia aleatoria entre 1 y 20 píxeles
